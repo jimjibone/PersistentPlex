@@ -8,8 +8,13 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface JRAppDelegate : NSObject <NSApplicationDelegate>
+@interface JRAppDelegate : NSObject <NSApplicationDelegate> {
+	IBOutlet NSMenu *statusMenu;
+	NSStatusItem *statusItem;
+	IBOutlet NSMenuItem *infoItem;
+	IBOutlet NSView *infoPane;
+}
 
-@property (assign) IBOutlet NSWindow *window;
+- (IBAction)quitApp:(id)sender;
 
 @end
